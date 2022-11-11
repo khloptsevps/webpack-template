@@ -39,6 +39,10 @@ export default ({ develop }) => ({
         loader: 'html-loader',
       },
       {
+        test: /\.(?:ico|png|jpg|jpeg|svg)$/i,
+        type: 'asset/inline',
+      },
+      {
         test: /\.css$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
